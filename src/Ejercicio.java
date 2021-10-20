@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Ejercicio {
     public static boolean compararVectores(int [] a, int[] b){
         boolean respuesta = true;
@@ -35,5 +36,16 @@ public class Ejercicio {
 
         return diferencia == 0;
     }
+
+    //SECUENCIA DE FIBONACCI
+
+   public static int funcionFibonacci(int num){
+       if(num == 0 || num==1)
+           return num;
+       else
+           return funcionFibonacci(num-1) + funcionFibonacci(num-2);
+   }
+
+
 
 }
