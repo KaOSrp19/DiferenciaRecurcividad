@@ -47,5 +47,30 @@ public class Ejercicio {
    }
 
 
+   /*METODO RECURSIVO PRA CALCULAR EL MAX VALOR DE UN VECTOR
+   * vector={2, 9, 6, 7, 6, 3, 4, 3}
+   *
+   * */
+
+    private static int maximoVector(int[] vector,int indice,int maximo){
+
+        if (indice==vector.length-1){
+            if (vector[indice] > maximo){
+                maximo= vector[indice];
+            }
+        }else {
+            if (vector[indice] > maximo){
+                maximo= vector[indice];
+            }
+            maximo= maximoVector(vector,indice + 1,maximo);
+        }
+        return maximo;
+    }
+    /*METODO AUXILIAR*/
+    public static int maximoVector(int[] vector){
+        return maximoVector(vector,0,0);
+    }
+
+
 
 }
